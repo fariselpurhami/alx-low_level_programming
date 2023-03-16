@@ -1,10 +1,13 @@
-```c
+#include <stdio.h>
 #include <unistd.h>
-
+/**
+* main - Entry point
+*
+* Return: Always 1 (Success)
+*/
 int main(void)
-	const char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	const int len = sizeof(msg) - 1; // exclude null terminator
-	write(2, msg, len); // write to stderr (file descriptor 2)
-	return 1;
+{
+	write(2,
+	"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
 }
-```
