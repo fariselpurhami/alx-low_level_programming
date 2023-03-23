@@ -1,16 +1,13 @@
 #include <stdio.h>
 #include "main.h"
-
 void print_remaining_days(int month, int day, int year)
 {
     int remaining_days = 0;
     int is_leap_year = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
-
     if (is_leap_year && month > 2)
     {
         day++;
     }
-
     switch (month)
     {
         case 1:
@@ -39,7 +36,6 @@ void print_remaining_days(int month, int day, int year)
             printf("Invalid date: %02d/%02d/%04d\n", month, day, year);
             return;
     }
-
     printf("Day of the year: %d\n", day);
     printf("Remaining days: %d\n", remaining_days);
 }
