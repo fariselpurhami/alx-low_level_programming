@@ -1,38 +1,45 @@
 #include <stdio.h>
 #include "main.h"
-/**
-* print_remaining_days - takes a date and prints how many days are
-* left in the year, taking leap years into account
-* @month: month in number format
-* @day: day of month
-* @year: year
-* Return: void
-*/
+
 void print_remaining_days(int month, int day, int year)
 {
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+    int remaining_days = 0;
+    int is_leap_year = ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0);
+
+    if (is_leap_year && month > 2)
     {
-        if (month > 2)
-        {
-            day++;
-        }
-        if (month >= 3 && day == 60)
-        {
-            day--;
-        }
-        printf("Day of the year: %d\n", day);
-        printf("Remaining days: %d\n", 366 - day);
+        day++;
     }
-    else
+
+    switch (month)
     {
-        if (month == 2 && day == 60)
-        {
-            printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
-        }
-        else
-        {
-            printf("Day of the year: %d\n", day);
-            printf("Remaining days: %d\n", 365 - day);
-        }
+        case 1:
+            remaining_days = 365 - day;
+            break;
+        case 2:
+            remaining_days = is_leap_year ? 366 - day : 365 - day;
+            break;
+        case 3:
+            remaining_days = is_leap_year ? 366 - 60 - day : 365 - 60 - day;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            remaining_days = 30 * (month - 1) - day + 212;
+            break;
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            remaining_days = 31 * (month - 1) - day + 212;
+            break;
+        default:
+            printf("Invalid date: %02d/%02d/%04d\n", month, day, year);
+            return;
     }
+
+    printf("Day of the year: %d\n", day);
+    printf("Remaining days: %d\n", remaining_days);
 }
