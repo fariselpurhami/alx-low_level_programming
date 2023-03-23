@@ -15,6 +15,7 @@
     if (a > largest)
     {
         largest = a;
+    }
     if (b > largest)
     {
         largest = b;
