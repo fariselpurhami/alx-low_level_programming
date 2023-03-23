@@ -1,10 +1,12 @@
 #include <stdio.h>
+
 /**
  * main -  prints the numbers from 1 to 100, followed by a new line.
  * But for multiples of three print
  * instead of the number and for the multiples of five print
  * Return: 0
  */
+
 int main(void)
 {
 	int i;
@@ -19,8 +21,10 @@ int main(void)
 			printf("Buzz ");
 		else
 			printf("%d ", i);
+		if (i == 100)
+			continue;
+		printf(" ");
 	}
 	printf("\n");
-
 	return (0);
 }
