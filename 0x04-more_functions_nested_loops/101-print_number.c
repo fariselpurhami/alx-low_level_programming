@@ -6,7 +6,8 @@
  */
 void print_number(int n)
 {
-	int i, j, digit, digits, power, is_negative;
+	int i, digit, digits, is_negative;
+	unsigned int power;
 
 	if (n == 0)
 	{
@@ -22,23 +23,25 @@ void print_number(int n)
 	{
 		is_negative = 0;
 	}
+
 	digits = 0;
 	for (i = n; i > 0; i /= 10)
 	{
 		digits++;
 	}
-	for (i = 0; i < digits; i++)
+	power = 1;
+	for (i = 1; i < digits; i++)
 	{
-		power = 1;
-		for (j = 0; j < digits - i - 1; j++)
-		{
-			power *= 10;
-		}
-		digit = (n / power) % 10;
-		_putchar(digit + '0');
+		power *= 10;
 	}
 	if (is_negative)
 	{
 		_putchar('-');
+	}
+	for (i = digits; i > 0; i--)
+	{
+		digit = (n / power) % 10;
+		_putchar(digit + '0');
+		power /= 10;
 	}
 }
