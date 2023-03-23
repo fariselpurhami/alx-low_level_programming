@@ -12,15 +12,15 @@
 {
     int largest;
 
-    if (a >= b && c largest)
+    if (a >= b || a >= c)
     {
         largest = a;
     }
-    if (b >= a && c largest)
+    if (b >= a || b >= c)
     {
         largest = b;
     }
-    if (c >= a && b largest)
+    if (c >= a || c >= b)
     {
         largest = c;
     }
