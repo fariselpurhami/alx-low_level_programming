@@ -28,7 +28,6 @@ int main(void)
 
 		Password[i] = charset[rand() % charset_lenght];
 	}
-	char password[] = "Tada! Congrats";
 
 	printf("%s", password);
 
