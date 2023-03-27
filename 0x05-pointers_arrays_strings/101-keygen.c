@@ -19,7 +19,8 @@ int main(void)
 	const int charset_length = sizeof(charset) - 1;
 
 	srand(time(NULL));
-
+	
+	int i;
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
 
