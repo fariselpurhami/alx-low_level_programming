@@ -7,6 +7,7 @@
  */
 int _atoi(char *s)
 {
+<<<<<<< HEAD
 	int i, d, n, len, f, digit;
 
 	i = 0;
@@ -15,6 +16,11 @@ int _atoi(char *s)
 	len = 0;
 	f = 0;
 	digit = 0;
+=======
+	long int sign = 1;
+	long int num = 0;
+	int i = 0;
+>>>>>>> b02d1e2329fcad225343afbf49bccca8f4287d2f
 
 	while (s[len] != '\0')
 		len++;
