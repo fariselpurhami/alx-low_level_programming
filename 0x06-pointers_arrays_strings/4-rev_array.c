@@ -5,7 +5,7 @@
  * @n: array elemnts
  * @a: array
  *
- * Return: void 
+ * Return: void
  */
 void reverse_array(int *a, int n)
 {
@@ -22,4 +22,4 @@ void reverse_array(int *a, int n)
 		start++;
 		end--;
 	}
-} 
+}
