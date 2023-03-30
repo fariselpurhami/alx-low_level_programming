@@ -15,12 +15,12 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		n = -n;
 	}
 	if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 	for (i = 0; n != 0; i++)
 	{
@@ -31,6 +31,6 @@ void print_number(int n)
 	}
 	for (i--; i >= 0; i--)
 	{
-		putchar(digits[i]);
+		_putchar(digits[i]);
 	}
 }
