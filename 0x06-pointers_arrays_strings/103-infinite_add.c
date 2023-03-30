@@ -1,55 +1,48 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * infinite_add - Adds two numbers
- * @n1: First number
- * @n2: Second number
- * @r: Buffer to store the result
- * @size_r: Size of the buffer
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer to store result
+ * @size_r: buffer size
  *
- * Return: Pointer to the result, or 0 if it can't be stored in r
+ * Return: pointer to result, or 0 if result can't be stored in r
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i = 0, j = 0, carry = 0, sum = 0;
+	int len1 = 0, len2 = 0, carry = 0, i, j;
+	char *p1 = n1, *p2 = n2, temp;
 
-	while (n1[i] != '\0')
-		i++;
-	while (n2[j] != '\0')
-		j++;
-
-	if (i >= size_r || j >= size_r)
+	while (*p1++)
+		len1++;
+	while (*p2++)
+		len2++;
+	if (len1 > size_r || len2 > size_r)
 		return (0);
-
-	r[size_r - 1] = '\0';
-	i--, j--, size_r--;
-
-	while (i >= 0 || j >= 0)
+	p1 = n1 + len1 - 1;
+	p2 = n2 + len2 - 1;
+	r[size_r] = '\0';
+	for (i = size_r - 1; i >= 0; i--)
 	{
-		sum = carry;
-		if (i >= 0)
-			sum += n1[i] - '0';
-		if (j >= 0)
-			sum += n2[j] - '0';
-
-		carry = sum / 10;
-		sum %= 10;
-
-		r[size_r - 1] = sum + '0';
-
-		i--, j--, size_r--;
+		if (p1 >= n1 && p2 >= n2)
+			temp = (*p1-- - '0') + (*p2-- - '0') + carry;
+		if (p1 >= n1)
+			temp = (*p1-- - '0') + carry;
+		if (p2 >= n2)
+			temp = (*p2-- - '0') + carry;
+		break;
+		carry = temp / 10;
+		r[i] = (temp % 10) + '0';
 	}
-
-	if (carry > 0 && size_r > 0)
+	if (i < 0 && carry)
+		return (0);
+	if (i < 0)
+		return (r + 1);
 	{
-		r[size_r - 1] = carry + '0';
+		for (j = i; j >= 0; j--)
+			r[j + 1] = r[j];
+		r[0] = carry + '0';
 		return (r);
 	}
-	else if (carry > 0)
-	{
-		return (0);
-	}
-
-	return (&r[size_r]);
 }
