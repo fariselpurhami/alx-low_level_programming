@@ -13,6 +13,7 @@ char *rot13(char *str)
 	char *result = str;
 
 	int i;
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0;
