@@ -1,15 +1,17 @@
 #include "main.h"
 
 /**
- * leet - a function that encodes a string into 1337.
- * @n: input value
- * Return: n value
+ * leet - encodes a string into 1337
+ * @str: string to be encoded
+ *
+ * Return: encoded string
  */
-char *leet(char *)
+char *leet(char *str)
 {
+	char *ptr = str;
 	char *leet = "aAeEoOtTlL";
 	char *replace = "4433007711";
-	int i, j;
+	int j;
 
 	while (*ptr)
 	{
