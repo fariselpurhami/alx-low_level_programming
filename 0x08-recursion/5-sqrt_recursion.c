@@ -11,12 +11,9 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-
 	if (n == 0 || n == 1)
 		return (n);
-
-	else
-		return (_sqrt_recursive(n, 0, n));
+		return (_sqrt_recursive(n, 1, n));
 }
 
 /**
@@ -24,6 +21,7 @@ int _sqrt_recursion(int n)
  * @n: N of input
  * @start: for square root
  * @end: for square root
+	
  * Return: square root of n or - 1
  */
 int _sqrt_recursive(int n, int start, int end)
@@ -32,7 +30,7 @@ int _sqrt_recursive(int n, int start, int end)
 
 	if (end >= start)
 	{
-		mid = (end + start) / 2;
+		mid = (start + end) / 2;
 
 		if (mid * mid == n)
 			return (mid);
