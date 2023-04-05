@@ -15,17 +15,17 @@ int _sqrt_recursion(int n)
 		return (n);
 
 	else
-		return (_sqrt_helper(n, 1, n));
+		return (_sqrt_recursive(n, 1, n));
 }
 
 /**
- * _sqrt_helper - Help _sqrt_recursion.
+ * _sqrt_recursive - Help _sqrt_recursion.
  * @n: N of input
  * @start: for square root
  * @end: for square root
  * Return: square root of n or - 1 if doesn't have it.
  */
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_recursive(int n, int start, int end)
 {
 	int mid;
 
@@ -37,8 +37,8 @@ int _sqrt_helper(int n, int start, int end)
 			return (mid);
 
 		if (mid * mid > n)
-			return (_sqrt_helper(n, start, mid - 1));
-		return (_sqrt_helper(n, mid + 1, end));
+			return (_sqrt_recursive(n, start, mid - 1));
+		return (_sqrt_recursive(n, mid + 1, end));
 	}
 	return (-1);
 }
