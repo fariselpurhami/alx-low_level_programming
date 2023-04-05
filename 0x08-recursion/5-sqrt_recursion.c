@@ -22,7 +22,7 @@ int _sqrt_recursion(int n)
  * @n: N of input
  * @start: for square root
  * @end: for square root
-	
+
  * Return: square root of n or - 1
  */
 int _sqrt_recursive(int n, int start, int end)
