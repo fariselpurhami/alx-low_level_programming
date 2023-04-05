@@ -11,34 +11,22 @@ int _sqrt_recursion(int n)
 	if (n < 0)
 		return (-1);
 
-	if (n == 0 || n == 1)
-		return (n);
-
-	else
-		return (_sqrt_helper(n, 1, n));
+		return (_sqrt_helper(n, n / 2));
 }
 
 /**
  * _sqrt_helper - Help _sqrt_recursion.
  * @n: N of input
- * @start: for square root
- * @end: for square root
+ * @x: square root
  * Return: square root of n or - 1 if doesn't have it.
  */
-int _sqrt_helper(int n, int start, int end)
+int _sqrt_helper(int n, int x)
 {
-	int mid;
+	if (x * x == n)
+		return (x);
 
-	if (end >= start)
-	{
-		mid = (end + start) / 2;
+	if (x * x > n)
+		return (-1);
 
-		if (mid * mid == n)
-			return (mid);
-
-		if (mid * mid > n)
-			return (_sqrt_helper(n, start, mid - 1));
-		return (_sqrt_helper(n, mid + 1, end));
-	}
-	return (-1);
+	return (_sqrt_helper(n, (x + n / x) / 2));
 }
