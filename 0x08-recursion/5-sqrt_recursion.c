@@ -38,7 +38,7 @@ int _sqrt_helper(int n, int start, int end)
 
 		if (mid * mid > n)
 			return (_sqrt_helper(n, start, mid - 1));
-		return (_sqrt_helper(n, end, mid + 1));
+		return (_sqrt_helper(n, mid, + 1, end));
 	}
 	return (-1);
 }
