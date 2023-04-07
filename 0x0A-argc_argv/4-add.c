@@ -10,27 +10,23 @@
  */
 int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int i, sum = 0;
+	int sum = 0, i, j;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
 		printf("0\n");
 		return (0);
 	}
 	for (i = 1; i < argc; i++)
 	{
-		int j = 0;
-
-		while (argv[i][j])
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[i][j] > '0' || argv[i][j] < '9')
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
 				return (1);
 			}
-			j++;
 		}
-
 		sum += atoi(argv[i]);
 	}
 
