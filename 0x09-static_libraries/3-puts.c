@@ -1,10 +1,9 @@
 #include "main.h"
 #include<stdio.h>
-
 /**
- * _puts - print a string, foolwed by new line
+ * _puts - print a string, followed by new line
  * @str: function parameter
- * Return : Always 0
+ * Return: 0
  */
 void _puts(char *str)
 {
@@ -15,7 +14,6 @@ void _puts(char *str)
 	}
 	_putchar('\n');
 }
-
 /**
  * main - Entry point
  *
