@@ -9,7 +9,7 @@
  */
 int _isdigit(char c)
 {
-	return (c >= '0' && c <= '9')
+	return (c >= '0' && c <= '9');
 }
 
 /**
@@ -43,14 +43,14 @@ char *_multiply(char *num1, char *num2)
 	int len2 = _strlen(num2);
 	int len = len1 + len2;
 	int *res = calloc(len, sizeof(int));
-	char *prod = calloc (len + 1, sizeof(char));
+	char *prod = calloc(len + 1, sizeof(char));
 	int i, j;
 
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		int carry = 0;
 
-/		int n1 = num[i] - '0';
+		int n1 = num[i] - '0';
 	}
 
 	for (j = len2 - 1; j >= 0; j--)
