@@ -26,7 +26,6 @@ int _strlen(char *s)
 	{
 		i++;
 	}
-
 	return (i);
 }
 
@@ -49,37 +48,30 @@ char *_multiply(char *num1, char *num2)
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		int carry = 0;
-
 		int n1 = num[i] - '0';
-	}
 
-	for (j = len2 - 1; j >= 0; j--)
-	{
-		int n2 = num2[j] - '0';
+		for (j = len2 - 1; j >= 0; j--)
+		{
+			int n2 = num2[j] - '0';
+			int sum = n1 * n2 + res[i + j + 1] + carry;
 
-		int sum = n1 * n2 + res[i + j + 1] + carry;
-
-		carry = sum / 10;
-		res[i + j + 1] = sum % 10;
-
+			carry = sum / 10;
+			res[i + j + 1] = sum % 10;
+		}
 		res[i + j + 1] += carry;
 	}
-
 	for (i = 0; i < len; i++)
 	{
 		prod[i] = res[i] + '0';
 	}
-
 	for (i = 0; prod[i] == '0' && i < len - 1; i++)
 		;
 	for (j = 0; i < len; i++, j++)
 	{
 		 prod[j] = prod[i];
 	}
-
 	prod[j] = '\0';
 	free(res);
-
 	return (prod);
 }
 
@@ -117,6 +109,5 @@ int main(int argc, char **argv)
 	prod = _multiply(num1, num2);
 	printf("%s\n", prod);
 	free(prod);
-
 	return (0);
 }
