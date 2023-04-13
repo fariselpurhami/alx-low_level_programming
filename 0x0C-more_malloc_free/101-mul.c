@@ -48,7 +48,8 @@ char *_multiply(char *num1, char *num2)
 	for (i = len1 - 1; i >= 0; i--)
 	{
 		int carry = 0;
-		int n1 = num[i] - '0';
+		int n1 = num2[i] - '0';
+
 
 		for (j = len2 - 1; j >= 0; j--)
 		{
@@ -88,7 +89,7 @@ int main(int argc, char **argv)
 
 	if (argc != 3)
 	{
-		pritf("Error\n");
+		printf("Error\n");
 
 		return (98);
 	}
