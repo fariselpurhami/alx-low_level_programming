@@ -69,8 +69,9 @@ char *_multiply(char *num1, char *num2)
 		;
 	for (j = 0; i < len; i++, j++)
 	{
-		 prod[j] = prod[i];
+		prod[j] = prod[i];
 	}
+
 	prod[j] = '\0';
 	free(res);
 	return (prod);
@@ -95,7 +96,6 @@ int main(int argc, char **argv)
 
 		return (98);
 	}
-
 	num1 = argv[1];
 	num2 = argv[2];
 
@@ -112,5 +112,6 @@ int main(int argc, char **argv)
 	prod = _multiply(num1, num2);
 	printf("%s\n", prod);
 	free(prod);
+
 	return (0);
 }
