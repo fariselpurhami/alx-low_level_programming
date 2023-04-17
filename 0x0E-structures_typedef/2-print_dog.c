@@ -3,10 +3,10 @@
 #include <stddef.h>
 
 /**
- * print_dog - a function that prints a struct dog
- * @d: struct a dog to a pointers
+ * print_dog - A FUNCTION THE PRINTS A STRUCT DOG
+ * @d: STRUCT DOG TO THE POINTETS
  *
- * Return: void
+ * Return: VOID
  */
 void print_dog(struct dog *d)
 {
