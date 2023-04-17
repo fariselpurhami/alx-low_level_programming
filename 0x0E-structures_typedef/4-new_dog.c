@@ -6,7 +6,7 @@
 /**
  * new_dog - FUNCTION THAT CREATS A NEW DOG.
  * @name: NAME OF THE DOG.
- * @age: AGE OF THE DOG
+ * @age: AGE OF THE DOG.
  * @owner: OWNER OF THE DOG.
  *
  * Return: VOID.
