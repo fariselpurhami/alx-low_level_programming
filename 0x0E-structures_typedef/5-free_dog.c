@@ -3,10 +3,10 @@
 #include <stddef.h>
 
 /**
- * free_dog - a function that frees dogs.
- * @d: Struct to dog_t pointer
+ * free_dog - A FUNCTIONS THAT FREES DOGS.
+ * @d: STRUCT DOG_T TO THE POINTERS.
  *
- * Return: void
+ * Return: VOID.
  */
 void free_dog(dog_t *d)
 {
