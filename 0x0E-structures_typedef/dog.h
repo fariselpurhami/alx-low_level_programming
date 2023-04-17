@@ -2,10 +2,10 @@
 #define DOG_H
 
 /**
- * struct dog - Define a new type struct dog with the following elements
- * @name: The Dog
- * @age:  The Dog
- * @owner: The Dog
+ * struct dog - DEFINE A NEW TYPE STRUCT DOG WITH THE FOLLOWING ELEMENTS
+ * @name: THE NAME OF THE DOG
+ * @age:  THE AGE OF THE DOG
+ * @owner: THE OWNER OF THE DOG
  *
  * Description: The Description of Name and Age and Owner of th Dog
  */
