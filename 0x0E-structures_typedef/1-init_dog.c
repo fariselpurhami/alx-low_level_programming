@@ -2,13 +2,13 @@
 #include <stddef.h>
 
 /**
- * init_dog - Write a function that initialize a variable of type struct dog
- * @d: Struct dog to Pointers
- * @name: Name of The Dog
- * @age: Age of The Dog
- * @owner: Owner of The Dog
+ * init_dog - WRITE A FUNCTION THAT INITIALIZE A VARIABLE OF TYPE STRUCT DOG
+ * @d: STRUCT A DOG TO POINTER
+ * @name: NAME OF THE DOG
+ * @age: AGE OF THE DOG
+ * @owner: OWNER OF THE DOG
  *
- * Return: void
+ * Return: VOID
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
