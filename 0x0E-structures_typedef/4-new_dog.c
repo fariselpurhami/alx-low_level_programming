@@ -4,12 +4,12 @@
 #include <stddef.h>
 
 /**
- * new_dog - function that creates a new dog.
- * @name: Name of The dog
- * @age: age of the dog
- * @owner: Owner of the dog
+ * new_dog - FUNCTION THAT CREATS A NEW DOG.
+ * @name: NAME OF THE DOG.
+ * @age: AGE OF THE DOG
+ * @owner: OWNER OF THE DOG.
  *
- * Return: void
+ * Return: VOID.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
