@@ -10,30 +10,33 @@
  */
 int main(int argc, char *argv[])
 {
+	int num_bytes;
+
 	int i;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		exit(1);
 	}
 
-	int num_bytes = atoi(argv[1]);
+	num_bytes = atoi(argv[1]);
 
 	if (num_bytes < 0)
 	{
 		printf("Error\n");
-		return (2);
+		exit(2);
 	}
-
-	unsigned char *main_func = (unsigned char *)main;
 
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x ", *(main_func + i));
+		if (i == num_bytes - 1)
+		{
+			printf("%02x\n", *((unsigned char *)main + num_bytes - 1));
+			break;
+		}
+		printf("%02x ", *((unsigned char *)main + i));
 	}
-
-	printf("\n");
 
 	return (0);
 }
