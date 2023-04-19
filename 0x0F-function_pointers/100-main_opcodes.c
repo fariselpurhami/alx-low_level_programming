@@ -2,17 +2,15 @@
 #include <stdlib.h>
 
 /**
- * main - ENTRY POINTS.
- * @argc: NUMBERS OF ARGUMENTS.
- * @argv: POINTERS OF ARGUMENTS.
+ * main - PRINTS THE OPCODES OF ITS OWN MAIN FUNCTION.
+ * @argc: NUMBERS OF ARGUEMNTS.
+ * @argv: ARRAY OF ARGUMENTS.
  *
- * Return: 0 (ALWAYS) SUCCESS
+ * Return: 0 ALWAYS
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int num_bytes;
-
-	int i;
+	int i, num_bytes;
 
 	if (argc != 2)
 	{
@@ -30,13 +28,9 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < num_bytes; i++)
 	{
-		if (i == num_bytes - 1)
-		{
-			printf("%02x\n", *((unsigned char *)main + num_bytes - 1));
-			break;
-		}
-		printf("%02x ", *((unsigned char *)main + i));
+		printf("%02x ", ((unsigned char *)main)[i]);
 	}
+	printf("\n");
 
 	return (0);
 }
