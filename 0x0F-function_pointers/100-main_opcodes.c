@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 
 		printf("%02x\n", main_ptr[i]);
 
-		if (i < num_bytes - 1)
+		if (i == num_bytes - 1)
 		{
 			printf(" ");
 		}
