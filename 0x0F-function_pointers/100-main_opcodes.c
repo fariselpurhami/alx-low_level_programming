@@ -8,8 +8,10 @@
  *
  * Return: 0 (ALWAYS) SUCCESS
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
+	int i;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
@@ -24,9 +26,14 @@ int main(int argc, char **argv)
 		return (2);
 	}
 
-	char *start = (char *)main;
+	unsigned char *main_func = (unsigned char *)main;
 
-	print_opcodes(start, num_bytes);
+	for (i = 0; i < num_bytes; i++)
+	{
+		printf("%02x ", *(main_func + i));
+	}
+
+	printf("\n");
 
 	return (0);
 }
