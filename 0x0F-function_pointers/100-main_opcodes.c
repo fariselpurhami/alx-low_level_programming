@@ -14,33 +14,30 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		fprintf(stderr, "Error\n");
-		return (1);
+		printf("Error\n");
+		exit(1);
 	}
 
 	num_bytes = atoi(argv[1]);
 
 	if (num_bytes < 0)
 	{
-		fprintf(stderr, "Error\n");
-		return (2);
+		printf("Error\n");
+		exit(2);
 	}
 
 	unsigned char *main_ptr = (unsigned char *)main;
 
 	for (i = 0; i < num_bytes - 1; i++)
 	{
-		printf("%02x ", main_ptr[i]);
-
-		printf("%02x\n", main_ptr[i]);
-
 		if (i == num_bytes - 1)
 		{
-			printf(" ");
-		}
-		else
-			printf("\n");
-	}
 
-	return (0);
+			printf("%02x ", main_ptr[i]);
+			printf("%02x\n", main_ptr[i]);
+			break;
+		}
+
+		return (0);
+	}
 }
