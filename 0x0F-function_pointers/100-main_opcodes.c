@@ -8,9 +8,11 @@
  *
  * Return: 0 ALWAYS
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i, num_bytes;
+	int num_bytes;
+
+	int i;
 
 	if (argc != 2)
 	{
@@ -26,7 +28,7 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
-	for (i = 0; i < num_bytes - 1; i++)
+	for (i = 0; i < num_bytes; i++)
 	{
 		if (i == num_bytes - 1)
 		{
