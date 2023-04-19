@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("Error\n");
+		fprintf(stderr, "Error\n");
 		return (1);
 	}
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 
 	if (num_bytes < 0)
 	{
-		printf("Error\n");
+		fprintf(stderr, "Error\n");
 		return (2);
 	}
 
@@ -34,6 +34,13 @@ int main(int argc, char **argv)
 
 		printf("%02x\n", main_ptr[i]);
 
-		return (0);
+		if (i < num_bytes - 1)
+		{
+			printf(" ");
+		}
+		else
+			printf("\n");
 	}
+
+	return (0);
 }
