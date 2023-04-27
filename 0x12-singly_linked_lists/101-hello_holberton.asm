@@ -1,10 +1,10 @@
 data:
-  message db "Hello, Holberton", 10, 0
+  [message db "Hello, Holberton", 10, 0]
 
 text:
-  global main
+  [global main]
 
-  extern printf
+  [extern printf]
   
 main:
 
