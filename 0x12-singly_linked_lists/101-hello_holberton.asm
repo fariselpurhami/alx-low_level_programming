@@ -3,6 +3,7 @@ data:
 
 text:
   [global main]
+
   [extern printf]
   
 main:
