@@ -8,8 +8,8 @@ text:
   
 main:
 
-  push   rbp
-  mov    rbp, rsp
+  push  rbp
+  mov   rbp, rsp
 
   lea   rdi, [message]
   xor   eax, eax
