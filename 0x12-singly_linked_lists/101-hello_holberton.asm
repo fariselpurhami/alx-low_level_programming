@@ -1,5 +1,5 @@
 data:
-  [message db "Hello, Holberton", 10, 0]
+  [message db 'Hello, Holberton\n', 0]
 
 text:
   [global main]
