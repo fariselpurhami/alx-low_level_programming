@@ -1,7 +1,7 @@
-section.data:
+data:
   message db "Hello, Holberton", 10, 0
 
-section.text:
+text:
   global main
 
   extern printf
