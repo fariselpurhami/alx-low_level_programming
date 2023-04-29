@@ -37,7 +37,7 @@ int pop_listint(listint_t **head)
 		*head = NULL;
 	}
 
-	else
+	if (current != *head)
 	{
 		temp->next = NULL;
 	}
