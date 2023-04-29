@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * free_listint2 - IT'S FUNCTION FREES LISTINT_T LISTS.
+ * free_listint2 - IT'S FUNCTION FREES LISTINT_T.
  * @head: IT'S A LIST OF POINTERS OF THE HEADERS.
  */
 void free_listint2(listint_t **head)
