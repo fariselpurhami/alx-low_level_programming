@@ -1,6 +1,6 @@
+#include "lists.h"
 #include <stdlib.h>
 #include <stddef.h>
-#include "lists.h"
 
 /**
  * reverse_listint - LETS WRITE FUCNTIONS
