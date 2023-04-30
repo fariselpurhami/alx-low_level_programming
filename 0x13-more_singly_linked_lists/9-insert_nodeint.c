@@ -8,7 +8,7 @@
  * @head: IT'S LISTS OF THE POINTER TO THE HEADER.
  * @idx: IT'S LISTS OF INDEX WHERE NEW NODE ADDED.
  * @n: IT'S A VALUES OF THE NEW NODES OF DATA (N).
- * Return: THE NEW NODE OF THE ADDRESS OR NULL IF.
+ * Return: THE NEW NODE OF THE ADDRESS OR IF NULL.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
