@@ -30,7 +30,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 	current = *head;
 
-	for (current != NULL && i < index - 1)
+	for (i = 0; current != NULL && i < index - 1)
 	{
 		current = current->next;
 		i++;
