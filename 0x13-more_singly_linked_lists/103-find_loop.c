@@ -17,27 +17,18 @@ listint_t *find_listint_loop(listint_t *head)
 		slow = slow->next;
 		fast = fast->next->next;
 	}
-<<<<<<< HEAD
-
-=======
 	
->>>>>>> bfe1ae8548e63bbab9612e700b9989bed68c7365
 	if (slow == fast)
 	{
 		slow = head;
 	}
-<<<<<<< HEAD
-
-=======
 	
->>>>>>> bfe1ae8548e63bbab9612e700b9989bed68c7365
 	while (slow && fast)
 	{
 		if (slow == fast)
 		{
 			return (slow);
 		}
-<<<<<<< HEAD
 
 		slow = slow->next;
 		fast = fast->next;
@@ -45,14 +36,3 @@ listint_t *find_listint_loop(listint_t *head)
 
 	return (NULL);
 }
-=======
-			
-			slow = slow->next;
-			fast = fast->next;
-			}
-			}
-			
-			return (NULL);
-			}
-		
->>>>>>> bfe1ae8548e63bbab9612e700b9989bed68c7365
