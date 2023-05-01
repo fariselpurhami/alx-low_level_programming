@@ -22,21 +22,19 @@ listint_t *find_listint_loop(listint_t *head)
 
 	while (here)
 	{
-		if (tortoise == here)
-		{
-			tortoise = head;
+		tortoise = tortoise->next;
+		here = here->next->next;
+	}
 
-			while (tortoise != here)
-			{
-				tortoise = tortoise->next;
-				here = here->next;
-			}
-
-			return (tortoise);
-		}
-
+	if (tortoise == here)
+	{
+		tortoise = head;
+	}
+	while (tortoise != here)
+	{
 		tortoise = tortoise->next;
 		here = here->next;
+		return (tortoise);
 	}
 
 	return (NULL);
