@@ -10,28 +10,28 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *tortoise = here;
+	listint_t *tortoise = head, *here = head;
 
 	if (head == NULL && head->next == NULL)
 	{
 		return (NULL);
 	}
 
-	while (here)
+	while (here && here->next)
 	{
 		tortoise = tortoise->next;
 		here = here->next->next;
-	}
 
-	if (tortoise == here)
-	{
-		tortoise = head;
-	}
-	while (tortoise != here)
-	{
-		tortoise = tortoise->next;
-		here = here->next;
-		
+		if (tortoise == here)
+		{
+			tortoise = head;
+		}
+		while (tortoise != here)
+		{
+			tortoise = tortoise->next;
+			here = here->next;
+		}
+
 		return (tortoise);
 	}
 
