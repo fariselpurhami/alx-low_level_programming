@@ -12,23 +12,31 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *tortoise = head, *here = head;
 
-	while (here)
+	if (head == NULL && head->next == NULL)
 	{
-		tortoise = tortoise->next;
-		here = here->next->next;
+		return (NULL);
 	}
 
-	if (tortoise == here)
-	{
-		tortoise = head;
+	tortoise = tortoise->next;
+	here = here->next->next;
 
-		while (tortoise != here)
+	while (here)
+	{
+		if (tortoise == here)
 		{
-			tortoise = tortoise->next;
-			here = here->next;
+			tortoise = head;
+
+			while (tortoise != here)
+			{
+				tortoise = tortoise->next;
+				here = here->next;
+			}
+
+			return (tortoise);
 		}
 
-		return (tortoise);
+		tortoise = tortoise->next;
+		here = here->next;
 	}
 
 	return (NULL);
