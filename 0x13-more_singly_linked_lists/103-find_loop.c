@@ -1,5 +1,5 @@
-#include <stddef.h>
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * find_listint_loop - LET'S WRITE A FUNCTION
