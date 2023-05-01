@@ -10,8 +10,7 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *tortoise = head;
-	listint_t *here = head;
+	listint_t *tortoise = here;
 
 	if (head == NULL && head->next == NULL)
 	{
