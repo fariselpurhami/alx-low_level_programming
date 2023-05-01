@@ -1,5 +1,5 @@
-#include "lists.h"
 #include <stddef.h>
+#include "lists.h"
 
 /**
  * find_listint_loop - LET'S WRITE A FUNCTION
@@ -12,7 +12,7 @@ listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *slow = head, *fast = head;
 
-	while (slow && fast && fast->next)
+	while (fast && fast->next)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
@@ -22,16 +22,12 @@ listint_t *find_listint_loop(listint_t *head)
 			slow = head;
 		}
 
-		while (slow && fast)
+		while (slow != fast)
 		{
-			if (slow == fast)
-			{
-				return (slow);
-			}
-
 			slow = slow->next;
 			fast = fast->next;
 		}
+		return (slow);
 	}
 	return (NULL);
 }
