@@ -17,9 +17,6 @@ listint_t *find_listint_loop(listint_t *head)
 		return (NULL);
 	}
 
-	tortoise = tortoise->next;
-	here = here->next->next;
-
 	while (here)
 	{
 		tortoise = tortoise->next;
