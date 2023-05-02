@@ -33,7 +33,7 @@ size_t free_listint_safe(listint_t **h)
 
 	next = current->next;
 	current->next = NULL;
-	free_listint(*h);
+	free_listint_safe(*h);
 	*h = next;
 	size++;
 
