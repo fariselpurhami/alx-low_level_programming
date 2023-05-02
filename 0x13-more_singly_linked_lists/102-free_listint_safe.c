@@ -9,7 +9,9 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *tortoise, *hare;
-	size_t count = 0;
+	size_t size = 0;
+	void *addresses[1024];
+	size_t j;
 
 	if (h == NULL || *h == NULL)
 	{
@@ -21,15 +23,29 @@ size_t free_listint_safe(listint_t **h)
 
 	while (hare != NULL && hare < hare->next)
 	{
-		count++;
-		free(tortoise);
-		tortoise = hare;
-		hare = hare->next;
+		addresses[size] = (void *)tortoise;
+		size++;
+
+		tortoise = tortoise->next;
+		hare = (hare->next)->next;
 	}
 
-	count++;
-	free(tortoise);
+	addresses[size] = (void *)tortoise;
+	size++;
+
+	if (hare != NULL)
+	{
+		addresses[size] = (void *)hare;
+		size++;
+	}
+
+	for (j = 0; j < size; j++)
+	{
+		tortoise = (listint_t *)addresses[j];
+		free(tortoise);
+	}
+
 	*h = NULL;
 
-	return (count);
+	return (size);
 }
