@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include "lists.h"
-
 /**
  * free_listint_safe - LETS WRITE FUNCTION THAT FREES LISTINT_T.
  * @h: IT'S LIST OF THE POINTERS TO THE HEADER OF THE LISTINT_T.
@@ -9,7 +8,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *current, *temp;
+	listint_t *tortoise, *hare;
 	size_t count = 0;
 
 	if (h == NULL || *h == NULL)
@@ -17,16 +16,20 @@ size_t free_listint_safe(listint_t **h)
 		return (0);
 	}
 
-	for (current = *h; current != NULL; current = temp)
+	tortoise = *h;
+	hare = (*h)->next;
+
+	while (hare != NULL && hare < hare->next)
 	{
 		count++;
-		temp = current->next;
-		free(current);
-
-		if (temp <= current)
-			break;
+		free(tortoise);
+		tortoise = hare;
+		hare = hare->next;
 	}
 
+	count++;
+	free(tortoise);
 	*h = NULL;
+
 	return (count);
 }
