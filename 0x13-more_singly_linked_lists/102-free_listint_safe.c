@@ -1,6 +1,10 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include "lists.h"
+
+size_t looped_listint_count(listint_t *head);
+size_t free_listint_safe(listint_t **h);
+
 /**
  * free_listint_safe - LETS WRITE FUNCTION THAT FREES LISTINT_T.
  * @h: IT'S LIST OF THE POINTERS TO THE HEADER OF THE LISTINT_T.
@@ -8,44 +12,79 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *tortoise, *hare;
+	listint_t *current, *next;
 	size_t size = 0;
-	void *addresses[1024];
-	size_t j;
 
 	if (h == NULL || *h == NULL)
+		return (size);
+
+	size = looped_listint_count(*h);
+
+	if (size > 0)
 	{
-		return (0);
+		current = *h;
 	}
 
-	tortoise = *h;
-	hare = (*h)->next;
-
-	while (hare != NULL && hare < hare->next)
+	while (size > 1)
 	{
-		addresses[size] = (void *)tortoise;
-		size++;
-
-		tortoise = tortoise->next;
-		hare = (hare->next)->next;
+		current = current->next;
+		size--;
 	}
 
-	addresses[size] = (void *)tortoise;
+	next = current->next;
+	current->next = NULL;
+	free_listint(*h);
+	*h = next;
 	size++;
 
-	if (hare != NULL)
+	while (*h != NULL)
 	{
-		addresses[size] = (void *)hare;
+		current = *h;
+		*h = (*h)->next;
+		free(current);
 		size++;
 	}
 
-	for (j = 0; j < size; j++)
+	return (size);
+}
+
+/**
+ * looped_listint_count - LET'S WRITE A FUNCTIONS THAT PRINTS THE
+ * COUNT NUMBERS OF UNIQUES NODES IN LOOPED LISTINT_T LINKED LIST.
+ * @head: IT'S A LIST OF THE POINTER IN THE HEADER IN THE LISTINT.
+ * Return: THE LIST IF IT NOT LOOPED - 0 OTHERWISE IN UNIQE NODES.
+ */
+size_t looped_listint_count(listint_t *head)
+{
+	listint_t *tortoise, *hare;
+	size_t count = 0;
+
+	if (head == NULL)
 	{
-		tortoise = (listint_t *)addresses[j];
-		free(tortoise);
+		return (count);
 	}
 
-	*h = NULL;
+	tortoise = hare = head;
 
-	return (size);
+	while (tortoise && hare && hare->next)
+	{
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+	}
+
+	if (tortoise != hare)
+	{
+		tortoise = tortoise->next;
+		count++;
+
+		while (tortoise != hare)
+		{
+			count++;
+			tortoise = tortoise->next;
+		}
+
+		return (count);
+	}
+
+	return (count);
 }
