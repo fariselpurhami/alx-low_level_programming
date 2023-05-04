@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "mainh.h"
+#include "main.h"
 
 /**
  * print_binary - LET'S WRITE A FUNCTIONS THAT
