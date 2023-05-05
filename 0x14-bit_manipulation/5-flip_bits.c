@@ -9,8 +9,7 @@
  * @m: IT'S (M) THE NUMBERS TO BE COUNTED IN THE POINTERS_T.
  * Return: COUNT
  */
-unsigned int flip_bits(unsigned long int n, 
-unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int xor_result = n ^ m;
 	unsigned int count = 0;
