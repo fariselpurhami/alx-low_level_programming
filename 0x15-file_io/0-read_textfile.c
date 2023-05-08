@@ -1,5 +1,7 @@
 #include "main.h"
 
+ssize_t read_textfile(const char *filename, size_t letters);
+
 /**
  * read_textfile - LET'S WRITE A FUNCTION THAT READS A
  * TEXT FILE AND PRINT IT TO THE POSIX STANDARD OUTPUTS.
