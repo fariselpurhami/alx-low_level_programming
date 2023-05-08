@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define MAX_FILENAME_LENGHT 256
+#define MAX_TEXT_CONTENT_LENGHT 1024
+
 ssize_t read_textfile(const char *filename, size_t letters);
 
 /**
