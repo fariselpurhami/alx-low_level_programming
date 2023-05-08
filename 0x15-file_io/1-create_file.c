@@ -35,6 +35,7 @@ int create_file(const char *filename, char *text_content)
 	if (len > 0)
 	{
 		char *buf = malloc(len * sizeof(char));
+
 		if (!buf)
 		{
 			perror("malloc");
