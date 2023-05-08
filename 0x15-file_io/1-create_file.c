@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define MAX_FILENAME_LENGHT 256
+#define MAX_TEXT_CONTENT_LENGHT 1024
+
 int create_file(const char *filename, char *text_content);
 
 /**
