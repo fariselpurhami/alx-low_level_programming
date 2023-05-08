@@ -11,6 +11,7 @@ int create_file(const char *filename, char *text_content);
 int create_file(const char *filename, char *text_content)
 {
 	int fd, res, len = 0;
+	mode_t mode = S_IRUSR | S_IWUSR;
 
 	if (!filename)
 	{
@@ -23,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, mode);
 	if (fd == -1)
 	{
 		perror("open");
