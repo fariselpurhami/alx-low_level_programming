@@ -55,7 +55,7 @@ int create_file(const char *filename, char *text_content)
 		res = 1;
 	}
 
-	if (fd == -1 || res == -1)
+	if (res == -1)
 	{
 		perror("write");
 		close(fd);
