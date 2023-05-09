@@ -1,5 +1,6 @@
 #include "main.h"
 
+#define BUFFER_SIZE 1024
 #define MAX_FILENAME_LENGHT 256
 #define MAX_TEXT_CONTENT_LENGHT 1024
 
@@ -55,13 +56,13 @@ int main(int argc, char *argv[])
 
 	if (close(file_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n, file_from);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_from);
 		exit(100);
 	}
 
 	if (close(file_to) == -1)
 	{
-		dprintf(STDDER_FILENO, "Error: can't close fd %d\n, file_to);
+		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", file_to);
 		exit(100);
 	}
 
