@@ -65,3 +65,25 @@ int create_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
+/**
+ * main - ENTRY POINTS.
+ * Return - ALWAYS (0).
+ */
+int main(void)
+{
+    int res;
+
+    res = create_file("testfile", "This is a test file.");
+    if (res == -1)
+    {
+        printf("Failed to create file.\n");
+    }
+
+    res = create_file("no_read_perm", "Best School !");
+    if (res == -1)
+    {
+        printf("Failed to create file.\n");
+    }
+
+    return (0);
+}
