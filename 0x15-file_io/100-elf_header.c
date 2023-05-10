@@ -1,5 +1,10 @@
 #include "main.h"
 
+#define EI_MAG4
+#define EI_MAG5
+#define EI_MAG6
+#define EI_MAG7 
+
 #define BUF_SIZE 128
 #define MAX_FILENAME_LENGHT 256
 #define MAX_TEXT_CONTENT_LENGHT 1024
