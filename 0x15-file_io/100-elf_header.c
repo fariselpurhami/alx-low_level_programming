@@ -55,8 +55,8 @@ int main(int argc, char **argv)
 	{
 		print_error("File is not an ELF file");
 		printf("ELF Header:\n");
-		printf("  Magic:   %02x %02x %02x %02x %02x %02x %02x %02x
-				%02x %02x %02x %02x %02x %02x %02x %02x\n",
+		printf("  Magic:   %02x %02x %02x %02x %02x %02x %02x %02x"
+				"%02x %02x %02x %02x %02x %02x %02x %02x\n",
 				elf_header->e_ident[EI_MAG0],
 				elf_header->e_ident[EI_MAG1],
 				elf_header->e_ident[EI_MAG2],
