@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 #define MAX_FILENAME_LENGHT 256
 #define MAX_TEXT_CONTENT_LENGHT 1024
 
