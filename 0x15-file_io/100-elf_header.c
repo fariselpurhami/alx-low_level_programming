@@ -1,9 +1,9 @@
 #include "main.h"
 
-#define EI_MAG4
-#define EI_MAG5
-#define EI_MAG6
-#define EI_MAG7 
+#define EI_MAG4 4
+#define EI_MAG5 5
+#define EI_MAG6 6
+#define EI_MAG7 7 
 
 #define BUF_SIZE 128
 #define MAX_FILENAME_LENGHT 256
