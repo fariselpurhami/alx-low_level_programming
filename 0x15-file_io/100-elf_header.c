@@ -3,7 +3,10 @@
 #define EI_MAG4 4
 #define EI_MAG5 5
 #define EI_MAG6 6
-#define EI_MAG7 7 
+#define EI_MAG7 7
+#define EI_MAG8 8
+#define EI_MAG9 9
+#define EI_MAG10 10
 
 #define BUF_SIZE 128
 #define MAX_FILENAME_LENGHT 256
@@ -55,7 +58,8 @@ int main(int argc, char **argv)
 	ehdr = (Elf64_Ehdr *) buf;
 
 	printf("ELF Header:\n");
-	printf("  Magic:   %02lx %02lx %02lx %02lx %02lx %02lx %02lx %02lx\n",
+	printf("  Magic:   %02lx %02lx %02lx %02lx %02lx %02lx %02lx %02lx %02lx"
+			"%02lx %02lx\n",
 			(unsigned long) ehdr->e_ident[EI_MAG0],
 			(unsigned long) ehdr->e_ident[EI_MAG1],
 			(unsigned long) ehdr->e_ident[EI_MAG2],
@@ -63,7 +67,10 @@ int main(int argc, char **argv)
 			(unsigned long) ehdr->e_ident[EI_MAG4],
 			(unsigned long) ehdr->e_ident[EI_MAG5],
 			(unsigned long) ehdr->e_ident[EI_MAG6],
-			(unsigned long) ehdr->e_ident[EI_MAG7]);
+			(unsigned long) ehdr->e_ident[EI_MAG7],
+			(unsigned long) ehdr->e_ident[EI_MAG8],
+			(unsigned long) ehdr->e_ident[EI_MAG9],
+			(unsigned long) ehdr->e_ident[EI_MAG10]);
 
 	printf("  Class:                             %s\n",
 			ehdr->e_ident[EI_CLASS] ==
