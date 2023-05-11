@@ -48,11 +48,11 @@ int main(int argc, char *argv[])
 		w = write(fd_to, buf, r);
 		if (w == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: can't write to file %s\n", argv[2]);
 			exit(99);
 		}
 	}
-	while (r == BUFSIZE)
+	while (r > 0)
 		;
 
 	if (close(fd_from) == -1)
