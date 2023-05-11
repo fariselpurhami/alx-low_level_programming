@@ -52,8 +52,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	while (r == BUFSIZE)
-		;
+	while (r > 0);
 
 	if (close(fd_from) == -1)
 	{
