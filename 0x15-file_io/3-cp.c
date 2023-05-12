@@ -57,13 +57,13 @@ int main(int argc, char *argv[])
 
 	if (close(fd_from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd_from);
+		dprintf(2, "Error: can't close fd %d\n", fd_from);
 		exit(100);
 	}
 
 	if (close(fd_to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd_to);
+		dprintf(2, "Error: can't close fd %d\n", fd_to);
 		exit(100);
 	}
 
