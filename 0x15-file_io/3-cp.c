@@ -53,8 +53,8 @@ int main(int argc, char *argv[])
 		}
 	}
 	while (r == BUFSIZE)
-	;
-		
+		;
+
 	if (close(fd_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't close fd %d\n", fd_from);
