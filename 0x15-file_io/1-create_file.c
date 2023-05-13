@@ -1,6 +1,6 @@
 #include "main.h"
 
-#define FILE_PERMS (S_IRUSR | S_IWUSR)
+#define FILE_PERMS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
 #define MAX_FILENAME_LENGHT 256
 #define MAX_TEXT_CONTENT_LENGHT 1024
 
@@ -16,7 +16,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd, res;
 	size_t len = 0;
-	mode_t mode = S_IRUSR | S_IWUSR;
+	mode_t mode = FILE_PERMS;
 
 	if (!filename)
 	{
