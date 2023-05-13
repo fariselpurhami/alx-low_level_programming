@@ -1,6 +1,6 @@
 #include "main.h"
 
-#define FILE_PERMS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH | S_IWOTH)
+#define FILE_PERMS (S_IRUSR | S_IWUSR)
 #define MAX_FILENAME_LENGHT 256
 #define MAX_TEXT_CONTENT_LENGHT 1024
 
