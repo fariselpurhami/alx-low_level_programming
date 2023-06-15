@@ -4,7 +4,6 @@
 
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
-
 /**
  * get_dnodeint_at_index - LET'S WRITE A FUNCTION THAT RETURN THE NTH NODE.
  * @head: IT'S A POINTER OF THE HEADER THAT WILL OF THE DOUBLY LINKED LIST.
