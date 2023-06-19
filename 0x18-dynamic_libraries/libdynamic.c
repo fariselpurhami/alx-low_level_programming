@@ -6,9 +6,10 @@
  *
  * Prints the character `c` to the standard output.
  */
-int _putchar(char c) {
-  putchar(c);
-  return 0;
+int _putchar(char c) 
+{
+	putchar(c);
+	return (0);
 }
 
 /**
