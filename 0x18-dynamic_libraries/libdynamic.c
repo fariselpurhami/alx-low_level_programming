@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * int _putchar(char c);
+ * _putchar - (char c)
  *
  * Prints the character `c` to the standard output.
  */
@@ -13,7 +13,7 @@ int _putchar(char c)
 }
 
 /**
- * int _islower(int c);
+ * _islower - (int c)
  *
  * Returns: 1 if the character `c` is lowercase, and 0 otherwise.
  */
@@ -23,7 +23,7 @@ int _islower(int c)
 }
 
 /**
- * int _isalpha(int c);
+ * _isalpha - (int c)
  *
  * Returns: 1 if the character `c` is alphabetic, and 0 otherwise.
  */
@@ -33,7 +33,7 @@ int _isalpha(int c)
 }
 
 /**
- * int _abs(int n);
+ * _abs - (int n)
  *
  * Returns: the absolute value of the integer `n`.
  */
@@ -43,7 +43,7 @@ int _abs(int n)
 }
 
 /**
- * int _isupper(int c);
+ * _isupper - (int c)
  *
  * Returns: 1 if the character `c` is uppercase, and 0 otherwise.
  */
@@ -53,7 +53,7 @@ int _isupper(int c)
 }
 
 /**
- * int _isdigit(int c);
+ * _isdigit - (int c)
  *
  * Returns: 1 if the character `c` is a digit, and 0 otherwise.
  */
@@ -63,7 +63,7 @@ int _isdigit(int c)
 }
 
 /**
- * int _strlen(char *s);
+ * _strlen - (char *s)
  *
  * Returns: the length of the string `s`.
  */
@@ -76,7 +76,7 @@ int _strlen(char *s)
 }
 
 /**
- * void _puts(char *s);
+ * _puts - (char *s)
  *
  * Prints the string `s` to the standard output.
  */
@@ -86,7 +86,7 @@ void _puts(char *s)
 }
 
 /**
- * char *_strcpy(char *dest, char *src);
+ * _strcpy - (char *dest, char *src)
  *
  * Copies the string `src` to the string `dest`.
  */
@@ -104,7 +104,7 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * int _atoi(char *s);
+ * _atoi - (char *s)
  *
  * Converts the string `s` to an integer.
  */
@@ -130,7 +130,7 @@ int _atoi(char *s)
 }
 
 /**
- * char *_strcat(char *dest, char *src);
+ * _strcat - (char *dest, char *src)
  *
  * Appends the string `src` to the end of the string `dest`.
  */
@@ -149,7 +149,7 @@ char *_strcat(char *dest, char *src)
 }
 
 /**
- * char *_strncat(char *dest, char *src, int n);
+ * _strncat - (char *dest, char *src, int n)
  *
  * Appends the first `n` characters of the string `src` to the end of the string `dest`.
  */
@@ -168,7 +168,7 @@ char *_strncat(char *dest, char *src, int n)
 }
 
 /**
- * char *_strncpy(char *dest, char *src, int n);
+ * _strncpy - (char *dest, char *src, int n);
  *
  * Copies the first `n` characters of the string `src` to the string `dest`.
  */
@@ -186,7 +186,7 @@ char *_strncpy(char *dest, char *src, int n)
 }
 
 /**
- * int _strcmp(char *s1, char *s2);
+ * _strcmp - (char *s1, char *s2)
  *
  * Compares the strings `s1` and `s2` and returns an integer indicating the result of the comparison.
  */
@@ -199,7 +199,7 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * char *_memset(char *s, char b, unsigned int n);
+ * _memset - (char *s, char b, unsigned int n)
  *
  * Sets the first `n` bytes of the memory pointed to by `s` to the value `b`.
  */
@@ -216,7 +216,7 @@ char *_memset(char *s, char b, unsigned int n)
 }
 
 /**
- * char *_memcpy(char *dest, char *src, unsigned int n);
+ * _memcpy - (char *dest, char *src, unsigned int n);
  *
  * Copies the first `n` bytes of the memory pointed to by `src` to the memory pointed to by `dest`.
  */
